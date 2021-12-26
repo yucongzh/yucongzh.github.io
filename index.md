@@ -1,1 +1,3 @@
-I use `github pages` to keep my markdown notes. Contents are as follows:
+I use `github pages` to keep my markdown notes.
+
+Contents are as follows:
