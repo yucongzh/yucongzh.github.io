@@ -1,1 +1,9 @@
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - README.md
+title: yucong's blog
 theme: jekyll-theme-leap-day
