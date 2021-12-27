@@ -6,4 +6,4 @@ relative_links:
 include:
   - README.md
 title: yucong's blog
-theme: jekyll-theme-leap-day
+theme: jekyll-theme-modernist
