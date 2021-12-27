@@ -8,3 +8,5 @@ where,
 - x is the vector of the observation (row in a dataset)
 - m is the vector of mean values of independent variables (mean of each column)
 - ![](http://latex.codecogs.com/gif.latex?C^{-1}) is the inverse covariance matrix of independent variables
+
+[back](index.md)
