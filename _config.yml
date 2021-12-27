@@ -7,3 +7,4 @@ include:
   - README.md
 title: yucong's blog
 theme: jekyll-theme-leap-day
+markdown: kramdown
