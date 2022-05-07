@@ -11,7 +11,7 @@
     <script src="./Static/js/lib/jquery.min.js"></script>
     <script>
         $.get('https://yucongzh.github.io/md/test.md', function(response, status, xhr){
-            $("#content").html(marked(response));
+            $("#content").html(marked('# no\n\n **why?**'));
         });
     </script>
     </body>
