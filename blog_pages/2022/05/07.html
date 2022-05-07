@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>05.07.22 blog</title>
+        <title>05/07/22 blog</title>
     </head>
 
     <body>
@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
         $.get('https://yucongzh.github.io/md/test.md', function(response, status, xhr){
-            $("#content").html(marked(response));
+            document.getElementById('content').innerHTML = marked.parse(response);
         });
     </script>
     </body>
