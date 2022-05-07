@@ -11,7 +11,8 @@
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <script>
         $.get('https://yucongzh.github.io/md/test.md', function(response, status, xhr){
-            $("#content").html(marked('# no\n\n **why?**'));
+            document.getElementById('content').innerHTML = 
+                marked.parse('# Marked in the browser\n\nRendered by **marked**.');
         });
     </script>
     </body>
