@@ -8,6 +8,7 @@
     <body>
     <div id="content"></div>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="./Static/js/lib/jquery.min.js"></script>
     <script>
         $.get('https://yucongzh.github.io/md/test.md', function(response, status, xhr){
             document.getElementById('content').innerHTML = marked.parse(response);
