@@ -12,7 +12,7 @@
     <script>
         $.get('https://yucongzh.github.io/md/test.md', function(response, status, xhr){
             document.getElementById('content').innerHTML = 
-                marked.parse('# Marked in the browser\n\nRendered by **marked**.');
+                marked.parse(response);
         });
     </script>
     </body>
