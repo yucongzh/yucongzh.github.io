@@ -15,15 +15,21 @@
 
     <body>
     
-        <div id="content"></div>
+        <div id="content">
+
+            <h2> Loss Function </h2>
+            
+            <p> $$f(i, j, w)=w \cdot \sigma\left(\beta \cdot\left(\left\|\mathbf{a} \odot \mathbf{h}_{i}+\mathbf{b} \odot \mathbf{h}_{j}\right\|_{2}^{2}-\mu\right)\right)$$ </p>
+
+        </div>
 
     </body>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
         $.get('https://yucongzh.github.io/md/test.md', function(response, status, xhr){
             document.getElementById('content').innerHTML = marked.parse(response);
         });
-    </script>
-    
+    </script> -->
+
 </html>
