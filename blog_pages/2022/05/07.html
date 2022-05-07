@@ -11,7 +11,7 @@
     <script src="./Static/js/lib/jquery.min.js"></script>
     <script>
         $.get('https://yucongzh.github.io/md/test.md', function(response, status, xhr){
-            document.getElementById('content').innerHTML = marked.parse(response);
+            $("#content").html(marked(response));
         });
     </script>
     </body>
