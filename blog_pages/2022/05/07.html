@@ -1,8 +1,10 @@
 <!doctype html>
 <html>
+
     <head>
         <meta charset="utf-8"/>
         <title>05/07/22 blog</title>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
         <script>
             MathJax = {
@@ -12,33 +14,16 @@
     </head>
 
     <body>
-    <div id="content">
-        
-        # Graph Anomaly Detection
-        
-        ## 1 Background
-        
-        ### History  
-        1. rely heavily on hand-crafted feature engineering
-        2. machine learning techniques, such as matrix factorization, SVM
-        3. Deep learning approaches
-        
-        
-        
-        ### Challenges  
-        1. How to effectively separate anomalies from normal objects through training remains
-        2. the interpretability of detected anomalies
-        3. high training cost
-        4. hyperparameter tuning
-        
-        
-        
-        ### Preliminaries  
-        - Plain graph
-        - Attributed graph
-        - Dynamic graph
-        
-        $a \rightarrow b$
-    </div>
+    
+        <div id="content"></div>
+
     </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        $.get('https://yucongzh.github.io/md/test.md', function(response, status, xhr){
+            document.getElementById('content').innerHTML = marked.parse(response);
+        });
+    </script>
+    
 </html>
