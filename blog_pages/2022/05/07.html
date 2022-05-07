@@ -6,16 +6,37 @@
     </head>
 
     <body>
-    <div id="content"></div>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <div id="content">
+
+        # Graph Anomaly Detection
+        
+        ## 1 Background
+        
+        ### History  
+        1. rely heavily on hand-crafted feature engineering
+        2. machine learning techniques, such as matrix factorization, SVM
+        3. Deep learning approaches
+        
+        
+        
+        ### Challenges  
+        1. How to effectively separate anomalies from normal objects through training remains
+        2. the interpretability of detected anomalies
+        3. high training cost
+        4. hyperparameter tuning
+        
+        
+        
+        ### Preliminaries  
+        - Plain graph
+        - Attributed graph
+        - Dynamic graph
+        
+        $a \rightarrow b$
+        
+    </div>
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" id="MathJax-script" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js"></script>
-    <script>
-        $.get('https://yucongzh.github.io/md/test.md', function(response, status, xhr){
-            document.getElementById('content').innerHTML = 
-                marked.parse(response);
-        });
-    </script>
     </body>
 </html>
