@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8"/>
-        <title>05/08/22 blog</title>
+        <title>The Kolmogorov-Smirnov Distance</title>
         <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
         <script>
@@ -14,15 +14,21 @@
     </head>
 
     <body>
+
+        <div id="title"><h1>The Kolmogorov-Smirnov Distance</h1></div>
     
         <div id="content">
 
-            to be edited ...
-            <!-- <h2> Loss Function </h2>
+            The KS distance is only for probability measures on $\mathbb{R}$.
+                $$\rho(\boldsymbol{X}, \boldsymbol{Y}):=\sup _{\boldsymbol{x} \in \mathbb{R}}\left|F_{X}(\boldsymbol{x})-F_{Y}(\boldsymbol{x})\right|$$
+            where $F_X(x)$ is the distribution function of X and $F_Y(x)$ is the distribution function of Y. <br>
 
-            <p> $$f(i, j, w)=w \cdot \sigma\left(\beta \cdot\left(\left\|\mathbf{a} \odot \mathbf{h}_{i}+\mathbf{b} \odot \mathbf{h}_{j}\right\|_{2}^{2}-\mu\right)\right)$$ </p> -->
+            Note that the <b>KS distance</b> is never bigger than the <a href="https://yucongzh.github.io/blog_pages/TV_dist.html"><b>Total Variational distance</b></a>.
 
         </div>
+
+        <br>
+        <a href="https://yucongzh.github.io/blog_nav.html">back</a>
 
     </body>
 

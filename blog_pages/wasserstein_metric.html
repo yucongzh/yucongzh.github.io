@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>The Wasserstein Metric</title>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+        <script>
+            MathJax = {
+              tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+            };
+        </script>
+    </head>
+
+    <body>
+
+        <div id="title"><h1>The Wasserstein metric</h1></div>
+    
+        <div id="content">
+
+            <b>The Wasserstein distance</b> or <b>Kantorovich-Monge-Rubinstein metric</b> is a distance function defined between probability distributions on a given metric space $\mathcal{M}$. <br>
+            
+            Intuitively, if each distribution is viewed as a unit amount of earth piled on the space $\mathcal{M}$, the metric or the distance is the minimum cost of turning one pile into the other, which is calculated as the amount of earth that needs to be moved times the mean distance it has to be moved. In this sense, the distance is sometimes known as <b>the Earth-Mover's distance</b>. <br>
+
+            <h2>> Earth-Mover (EM) Distance (Wasserstein-1)</h2>
+            (<b>Optimal transport problem</b>)&nbsp;
+            For a distribution of mass $\mu(x)$, we wish to transport the mass so that it is transformed into $v(x)$.
+
+            <ul> <b>Notations</b>:
+                <li>$c(x, y)$ := Cost of transporting a unit mass from x to the point y. $c(x,y) \rightarrow [0,\infty)$.</li>
+                <li>$\gamma(x, y)$ := Amount of mass to move from x to y, where $\int \gamma(x,x')\operatorname{d}x'=\mu(x), \int \gamma(x',x)\operatorname{d}x'=v(x)$.</li>
+            </ul>
+
+            Thus, the total cost of a transport plan $\gamma$ can be written as 
+                $$\int\int c(x,y)\gamma(x,y)\operatorname{d}x\operatorname{d}y$$
+            And the cost of the optimal plan is
+                $$C=\inf_{\gamma \in \Gamma(\mu, v)}\int \int c(x,y)\gamma(x,y)\operatorname{d}x \operatorname{d}y$$
+            where $\Gamma$ is the set of all joint distributions whose maginals are $\mu$ and $v$. <br>
+            If $c=\|x-y\|$, the distance is called <b>Wasserstein-1 distance</b>:
+                $$W(\mathbb{P}_r, \mathbb{P}_g) = \inf_{\gamma \in \Pi(\mathbb{P}_r, \mathbb{P}_g)} \mathbb{E}_{(x,y)\sim \gamma}\left[\|x-y\|\right]$$
+
+            <h2>> Wasserstein-p Distance</h2>
+            The general form of Wasserstein-p distance is
+                $$W_p(\mu, v) := \left( \inf_{\gamma \in \Gamma(\mu, v)}\int_{M\times M} d(x,y)^p \operatorname{d}\gamma(x, y) \right)^{1/p}$$
+
+            
+            <h2>> Properties</h2>
+
+        </div>
+
+        <div id="links">
+            <b>Reference Links</b> <br>
+            1. <a href="http://yunshengb.com/wp-content/uploads/2018/03/03022018_Wasserstein_presentation.pdf">Theory and Applications of
+                Wasserstein Distance</a> <br>
+            2. <a href="https://en.wikipedia.org/wiki/Wasserstein_metric">Wasserstein metric (wikipedia)</a> <br>
+            3. <a href="https://souravchatterjee.su.domains//Lecture2.pdf">Stein's method and applications, Lecture 2</a> <br>
+        </div>
+
+        <br>
+        <a href="https://yucongzh.github.io/blog_nav.html">back</a>
+
+    </body>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        $.get('https://yucongzh.github.io/md/test.md', function(response, status, xhr){
+            document.getElementById('content').innerHTML = marked.parse(response);
+        });
+    </script> -->
+
+</html>

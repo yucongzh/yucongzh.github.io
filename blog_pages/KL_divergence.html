@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>The Kullback-Leibler divergence</title>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+        <script>
+            MathJax = {
+              tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+            };
+        </script>
+    </head>
+
+    <body>
+
+        <div id="title"><h1>The Kullback–Leibler divergence</h1></div>
+    
+        <div id="content">
+
+            For discrete probability distribution P and Q defined on the same probability space $\mathcal{X}$, the KL divergence is written as:
+            $$D_{\mathrm{KL}}(P \| Q)=\sum_{x \in \mathcal{X}} P(x) \log \left(\frac{P(x)}{Q(x)}\right)$$
+            <!-- <br> -->
+            For continuous probability distribution ..., the KL divergenece is written as:
+            $$D_{\mathrm{KL}}(P \| Q)=\int_{-\infty}^{\infty} p(x) \log \left(\frac{p(x)}{q(x)}\right) d x$$
+            <!-- <br> -->
+            The term $D_{\mathrm{KL}}(P \| Q)$ is essentially the relative entropy of P with regard to Q. <br> 
+            It is often used to measure the information gain achieved if P would be used instead of Q which is currently used.
+            
+            <h2>Properties</h2>
+            <ol>
+                <li>It is always non-negative.</li>
+                <li>It is invariant under parameter transformations.</li>
+                <li>
+                    It is additive for independent distribution. If $P_1, P_2$ are indp. distributions, and $Q_1, Q_2$ likewise, then:
+                    $$D_{\mathrm{KL}}(P \| Q)=D_{\mathrm{KL}}(P_1 \| Q_1)+D_{\mathrm{KL}}(P_2 \| Q_2)$$
+                </li>
+                <li>
+                    It is convex in the pair of pmfs $(p, q)$.
+                    $$D_{\mathrm{KL}}\left(\lambda p_{1}+(1-\lambda) p_{2} \| \lambda q_{1}+(1-\lambda) q_{2}\right) \leq \lambda D_{\mathrm{KL}}\left(p_{1} \| q_{1}\right)+(1-\lambda) D_{\mathrm{KL}}\left(p_{2} \| q_{2}\right)$ for $0 \leq \lambda \leq 1$$
+                </li>
+            </ol>
+
+        </div>
+
+        <br>
+        <a href="https://yucongzh.github.io/blog_nav.html">back</a>
+
+    </body>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        $.get('https://yucongzh.github.io/md/test.md', function(response, status, xhr){
+            document.getElementById('content').innerHTML = marked.parse(response);
+        });
+    </script> -->
+
+</html>
