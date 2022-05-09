@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>The Total Variation Distance</title>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+        <script>
+            MathJax = {
+              tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+            };
+        </script>
+    </head>
+
+    <body>
+
+        <div id="title"><h1>The Total Variation (TV) Distance</h1></div>
+    
+        <div id="content">
+
+            The TV distance between two probability measures $\mu$ and $v$ on $\mathbb{R}$ is defined as:
+                $$\operatorname{TV}(\mu, \nu):=\sup _{A \in \mathcal{B}}|\mu(A)-\nu(A)|$$
+            where $\mathcal{B}$ denotes the class of Borel sets.<br>
+
+            "Largest possible difference between the probabilities that the two probability distributions can assign to the same event." —— Wikipedia
+
+        </div>
+
+        <br>
+        <a href="https://yucongzh.github.io/blog_nav.html">back</a>
+
+    </body>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        $.get('https://yucongzh.github.io/md/test.md', function(response, status, xhr){
+            document.getElementById('content').innerHTML = marked.parse(response);
+        });
+    </script> -->
+
+</html>
