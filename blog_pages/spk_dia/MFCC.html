@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>MFCC</title>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+        <script>
+            MathJax = {
+              tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+            };
+        </script>
+    </head>
+
+    <body>
+
+        <div id="title"><h1>The Mel-Frequency Cepstral Co-efficient (MFCC)</h1></div>
+    
+        <div id="content">
+
+            <dl style="font-size: 20px;">
+                <dt style="font-weight: 200; font-size: 28px;">Steps to convert audio in MFCC:</dt>
+                <dd>1. Get audio in a time domain format.</dd>
+                <dd>2. Pre-emphasis.</dd>
+                <dd>3. Audio framing, assuming the audio is a stationary process for a short period of time.</dd>
+                <dd>5. Perform hamming window to make the audio continuous.</dd>
+                <dd>6. Perform FFT to convert amplitude into frequency.</dd>
+                <dd>7. Using mel-filterbanks to convert the frequency into mel scale.</dd>
+                $$\operatorname{Mel}(f)=2585 \times \log \left(1+\frac{f}{700}\right)$$
+                <dd>8. Perform logarithm of all filterbank energies.</dd>
+                <dd>9. Perform IDCT of the log filterbank energies.</dd>
+                <dd>10. Keep top several IDCT co-efficients, discarding the rest.</dd>
+            </dl>
+
+        </div>
+
+        <br>
+        <a href="https://yucongzh.github.io/blog_nav.html">back</a>
+
+    </body>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        $.get('https://yucongzh.github.io/md/test.md', function(response, status, xhr){
+            document.getElementById('content').innerHTML = marked.parse(response);
+        });
+    </script> -->
+
+</html>
